@@ -43,6 +43,26 @@ cp .env.example .env
 python main.py
 ```
 
+## One-command scripts
+
+For VPS setup and updates, two helper scripts are included:
+
+- `install.sh`: interactive install (asks for repo URL, BOT token, branch, service name, user)
+- `update.sh`: pull latest code, backup DB, reinstall deps, restart service
+
+Recommended usage on server:
+
+```bash
+chmod +x install.sh update.sh
+./install.sh
+```
+
+Then later updates are just:
+
+```bash
+./update.sh
+```
+
 ## systemd example
 
 ```ini
